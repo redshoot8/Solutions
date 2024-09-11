@@ -10,7 +10,7 @@ def atbash(string: str, alphabet: str = ru_alphabet) -> str:
 
     new_str = ''
     for char in string:
-        new_str += alphabet[len(alphabet) - alphabet.index(char) - 1]
+        new_str += alphabet[len(alphabet) - alphabet.index(char) - 1] if char in alphabet else char
     return new_str
 
 
